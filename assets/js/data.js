@@ -17,7 +17,7 @@ const SITE = {
       "behind AIRefinery — an enterprise agent platform now powering 30+ real-world " +
       "use cases. My work spans agent orchestration, tool use, RAG, and post-training " +
       "alignment. This site collects my research, the systems I build, and what I'm exploring now.",
-    photo: "", // drop a square image in assets/img/ and set its path, e.g. "assets/img/profile.jpg"
+    photo: "assets/img/profile.jpg", // square image; falls back to "QL" monogram if missing
     location: "San Francisco Bay Area",
     affiliation: "Accenture — Center for Advanced AI",
     email: "iamliuquan@gmail.com",
@@ -36,8 +36,8 @@ const SITE = {
   // Add a URL to surface a link in the footer & contact. Empty ones are hidden.
   links: [
     { icon: "github",   label: "GitHub",         url: "https://github.com/iamliuquan" },
-    { icon: "scholar",  label: "Google Scholar", url: "" }, // TODO: paste your Scholar profile URL
-    { icon: "linkedin", label: "LinkedIn",       url: "https://www.linkedin.com/in/Quan-L" }, // TODO: confirm
+    { icon: "scholar",  label: "Google Scholar", url: "https://scholar.google.com/citations?user=moBC7TkAAAAJ&hl=en" },
+    { icon: "linkedin", label: "LinkedIn",       url: "https://www.linkedin.com/in/quan-l/" },
     { icon: "mail",     label: "Email",          url: "mailto:iamliuquan@gmail.com" },
   ],
 
