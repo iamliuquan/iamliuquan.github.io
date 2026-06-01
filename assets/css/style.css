@@ -324,6 +324,17 @@ h3 { font-size: 1.18rem; }
 }
 @media (max-width: 560px) { .update { grid-template-columns: 1fr; gap: .35rem; } }
 
+/* ---------- career / experience timeline ---------- */
+.career { display: grid; grid-template-columns: 160px 1fr; gap: 1.4rem; padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+.career:last-child { border-bottom: none; }
+.career__period { color: var(--accent); font-size: .85rem; padding-top: .25rem; }
+.career__body h3 { font-size: 1.12rem; color: var(--text); margin-bottom: .2rem; }
+.career__org { color: var(--text-soft); font-size: .96rem; margin-bottom: .7rem; }
+.career__bullets { list-style: none; padding: 0; margin: 0; display: grid; gap: .45rem; }
+.career__bullets li { position: relative; padding-left: 1.2rem; color: var(--text-soft); font-size: .94rem; }
+.career__bullets li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+@media (max-width: 600px) { .career { grid-template-columns: 1fr; gap: .35rem; } }
+
 /* ---------- about / prose ---------- */
 .prose { max-width: 68ch; }
 .prose p { color: var(--text-soft); margin-bottom: 1.1rem; }

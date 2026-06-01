@@ -220,10 +220,26 @@
     fill("homeCollabText", esc(SITE.collaboration.intro));
   }
 
+  function careerItem(c) {
+    const bullets = (c.bullets || []).length
+      ? `<ul class="career__bullets">${c.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` : "";
+    return `
+      <article class="career reveal">
+        <div class="career__period mono">${esc(c.period || "")}</div>
+        <div class="career__body">
+          <h3>${esc(c.role || "")}</h3>
+          <div class="career__org">${esc(c.org || "")}${c.place ? ` <span class="muted">· ${esc(c.place)}</span>` : ""}</div>
+          ${bullets}
+        </div>
+      </article>`;
+  }
+
   function renderResearch() {
     fill("interests", (SITE.interests || []).map((i) => `<span class="pill pill--accent">${esc(i)}</span>`).join(""));
     const pubs = (SITE.publications || []).map((p) => pubCard(p, SITE.profile.name)).join("");
     fill("pubList", pubs || `<p class="empty-note">// publications coming soon</p>`);
+    fill("experienceList", (SITE.experience || []).map(careerItem).join(""));
+    fill("educationList", (SITE.education || []).map(careerItem).join(""));
   }
 
   function renderProjects() {
