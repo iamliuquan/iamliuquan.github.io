@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quan Liu — Researcher & Engineer</title>
+  <meta name="description" content="Quan Liu — researcher and engineer based in Cleveland. Research, projects, and updates." />
+  <meta name="author" content="Quan Liu" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quan Liu" />
+  <meta property="og:description" content="Researcher & engineer. Research, projects, and updates." />
+  <meta property="og:url" content="https://iamliuquan.github.io/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0e14'/><text x='50' y='68' font-family='monospace' font-size='52' font-weight='700' fill='%2322d3ee' text-anchor='middle'>QL</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="home">
+
+  <!-- HERO / ABOUT -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="wrap hero__inner">
+      <div class="reveal in">
+        <span class="eyebrow mono">hello, world</span>
+        <h1>I'm <span class="gradient">Quan Liu</span>.</h1>
+        <p class="hero__role mono" id="heroRole"></p>
+        <p class="hero__desc" id="heroDesc"></p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="research.html">Explore my research <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" id="cvBtn" href="#" target="_blank" rel="noopener">Download CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg></a>
+        </div>
+      </div>
+      <div class="hero__portrait" id="heroPortrait"></div>
+    </div>
+  </section>
+
+  <!-- SELECTED RESEARCH -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-head__row">
+          <div>
+            <span class="eyebrow">Selected research</span>
+            <h2>Recent work & papers</h2>
+          </div>
+          <a class="link-more mono" href="research.html">All publications <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div id="homePubs"></div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="section section--tight" style="background:var(--bg-soft)">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-head__row">
+          <div>
+            <span class="eyebrow">Things I build</span>
+            <h2>Featured projects</h2>
+          </div>
+          <a class="link-more mono" href="projects.html">All projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="grid grid--3" id="homeProjects"></div>
+    </div>
+  </section>
+
+  <!-- LATEST UPDATES -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-head__row">
+          <div>
+            <span class="eyebrow">What's new</span>
+            <h2>Latest updates</h2>
+          </div>
+          <a class="link-more mono" href="updates.html">All updates <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="timeline" id="homeUpdates"></div>
+    </div>
+  </section>
+
+  <!-- COLLABORATION CTA -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-banner reveal">
+        <span class="eyebrow">Let's work together</span>
+        <h2>Open to collaboration</h2>
+        <p id="homeCollabText"></p>
+        <a class="btn btn--primary" href="collaboration.html">How we can collaborate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
