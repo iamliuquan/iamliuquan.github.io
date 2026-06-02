@@ -258,6 +258,8 @@
     const bio = (SITE.profile.bio || []).map((p) => `<p>${p}</p>`).join("");
     fill("aboutBio", bio);
     fill("aboutSocials", socialsHTML());
+    fill("homeExperience", (SITE.experience || []).map(careerItem).join(""));
+    fill("homeEducation", (SITE.education || []).map(careerItem).join(""));
     // selected publications (top 3)
     const pubs = (SITE.publications || []).slice(0, 3).map(pubCard).join("");
     fill("homePubs", pubs || `<p class="empty-note">// publications coming soon</p>`);
@@ -289,8 +291,6 @@
   function renderResearch() {
     fill("interests", (SITE.interests || []).map((i) => `<span class="pill pill--accent">${esc(i)}</span>`).join(""));
     fill("pubList", pubClusters() || `<p class="empty-note">// publications coming soon</p>`);
-    fill("experienceList", (SITE.experience || []).map(careerItem).join(""));
-    fill("educationList", (SITE.education || []).map(careerItem).join(""));
   }
 
   function renderProjects() {

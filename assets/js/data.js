@@ -230,9 +230,12 @@ const SITE = {
     {
       title: "AIRefinery",
       tag: "Enterprise platform",
-      blurb: "Accenture's enterprise multi-agent platform. I contributed core feature implementation across the agent stack. Featured at NVIDIA GTC.",
+      blurb: "Accenture's enterprise multi-agent platform, also available as an open-source Python SDK. I contributed core feature implementation across the agent stack. Featured at NVIDIA GTC.",
       tech: ["Multi-agent", "Orchestration", "RAG"],
-      links: [],
+      links: [
+        { label: "Website", url: "https://airefinery.accenture.com/", icon: "external" },
+        { label: "SDK", url: "https://github.com/Accenture/airefinery-sdk", icon: "github" },
+      ],
       featured: true,
     },
     {
@@ -278,7 +281,7 @@ const SITE = {
       org: "Accenture — Center for Advanced AI",
       role: "Sr. Research Scientist / Tech Lead",
       place: "Mountain View, CA",
-      period: "2024 — Present",
+      period: "May 2024 — Present",
       bullets: [
         "Founding member of the agentic systems team; lead a team building a coding agent and an automated agent-generation pipeline.",
         "Contributed core feature implementation to AIRefinery, Accenture's enterprise multi-agent platform (featured at NVIDIA GTC).",
@@ -290,7 +293,7 @@ const SITE = {
       org: "Merck — Image Data Analytics",
       role: "Research Intern",
       place: "West Point, PA",
-      period: "2023",
+      period: "May – Aug 2023",
       bullets: [
         "Built a multimodal fusion pipeline integrating imaging and structured data for robust prediction.",
         "Cut inference cost by 40% via anomaly-guided patch selection and efficient visual encoding.",
@@ -300,7 +303,7 @@ const SITE = {
       org: "Alibaba — DAMO Academy",
       role: "Research Intern",
       place: "New York, NY",
-      period: "2022",
+      period: "May – Aug 2022",
       bullets: [
         "Built a CLIP-based vision-language framework for mutation classification (+9 F1).",
         "Designed missing-modality retrieval and alignment for real-world multimodal deployment.",
@@ -310,8 +313,20 @@ const SITE = {
 
   /* ---- education --------------------------------------------------- */
   education: [
-    { org: "Vanderbilt University", role: "Ph.D., Computer Science", period: "2024" },
-    { org: "Huazhong University of Science and Technology (HUST)", role: "B.S., Electrical Engineering", period: "2018" },
+    {
+      org: "Vanderbilt University", role: "Ph.D., Computer Science",
+      place: "Nashville, TN", period: "Aug 2020 — May 2024",
+      bullets: ["Completed the Ph.D.; research in computational vision, medical imaging, and machine learning."],
+    },
+    {
+      org: "Case Western Reserve University", role: "Ph.D. study, Computer Engineering",
+      place: "Cleveland, OH", period: "Aug 2018 — May 2020",
+      bullets: ["Began doctoral studies, then transferred to Vanderbilt University to continue the Ph.D."],
+    },
+    {
+      org: "Huazhong University of Science and Technology (HUST)", role: "B.S., Electrical Engineering",
+      place: "Wuhan, China", period: "Sep 2014 — Jun 2018", bullets: [],
+    },
   ],
 
   /* ---- updates / news (newest first) ------------------------------- */
