@@ -12,11 +12,12 @@ const SITE = {
     role: 'LLM &amp; Agent Research Scientist <b>·</b> Tech Lead <b>@</b> Accenture',
     tagline: "Building production-grade multi-agent systems at scale.",
     intro:
-      "I'm an LLM and agent research scientist building production multi-agent " +
-      "systems at scale. At Accenture's Center for Advanced AI, I lead the team " +
-      "behind AIRefinery — an enterprise agent platform now powering 30+ real-world " +
-      "use cases. My work spans agent orchestration, tool use, RAG, and post-training " +
-      "alignment. This site collects my research, the systems I build, and what I'm exploring now.",
+      "I'm an LLM and agent research scientist at Accenture's Center for Advanced AI. " +
+      "As a founding member, I lead a team building a coding agent and an automated " +
+      "agent-generation pipeline, and I've contributed core features to AIRefinery, " +
+      "Accenture's enterprise agent platform. My work spans agent orchestration, tool " +
+      "use, RAG, and post-training alignment — this site collects my research, the " +
+      "systems I build, and what I'm exploring now.",
     photo: "assets/img/profile.jpg", // square image; falls back to "QL" monogram if missing
     location: "San Francisco Bay Area",
     affiliation: "Accenture — Center for Advanced AI",
@@ -52,68 +53,89 @@ const SITE = {
   // "Quan Liu" in authors is bolded automatically. Add links when you have URLs.
   publications: [
     {
-      title: "MCP-Bench: Benchmarking Tool-Using LLM Agents with Real-World Tasks",
-      authors: ["Quan Liu", "et al."],
+      title: "MCP-Bench: Benchmarking Tool-Using LLM Agents with Complex Real-World Tasks via MCP Servers",
+      authors: ["Zhenting Wang", "Qi Chang", "Hemani Patel", "Shashank Biju", "Cheng-En Wu", "Quan Liu", "Aolin Ding", "Alireza Rezazadeh", "Ankit Shah", "Yujia Bao", "Eugene Siow"],
       venue: "ICLR 2026 · NeurIPS 2025",
       year: "2026",
       type: "conference",
-      abstract: "A benchmark evaluating tool-using LLM agents on realistic, multi-step tasks over MCP-style tool servers.",
-      links: [ /* { label: "arXiv", url: "" }, { label: "Code", url: "" } */ ], // TODO: add links
+      abstract: "A benchmark evaluating tool-using LLM agents on complex, multi-step tasks over 28 live MCP servers spanning 250+ tools.",
+      links: [
+        { label: "arXiv", url: "https://arxiv.org/abs/2508.20453" },
+        { label: "Code", url: "https://github.com/Accenture/mcp-bench", icon: "github" },
+      ],
     },
     {
-      title: "DRAGON: Guard LLM Unlearning via Negative Detection and Reasoning",
-      authors: ["Quan Liu", "et al."],
+      title: "DRAGON: Guard LLM Unlearning in Context via Negative Detection and Reasoning",
+      authors: ["Yaxuan Wang", "Chris Yuhao Liu", "Quan Liu", "Jinglong Pang", "Wei Wei", "Yujia Bao", "Yang Liu"],
       venue: "ICLR 2026",
       year: "2026",
       type: "conference",
       abstract: "",
-      links: [],
+      links: [
+        { label: "arXiv", url: "https://arxiv.org/abs/2511.05784" },
+      ],
     },
     {
       title: "PromptBridge: Cross-Model Prompt Transfer for Large Language Models",
-      authors: ["Quan Liu", "et al."],
+      authors: ["Yaxuan Wang", "Quan Liu", "Zhenting Wang", "Zichao Li", "Wei Wei", "Yang Liu", "Yujia Bao"],
       venue: "arXiv preprint",
       year: "2025",
       type: "preprint",
       abstract: "",
-      links: [],
+      links: [
+        { label: "arXiv", url: "https://arxiv.org/abs/2512.01420" },
+      ],
     },
     {
       title: "LLM Unlearning via Loss Adjustment with Only Forget Data",
-      authors: ["Quan Liu", "et al."],
+      authors: ["Yaxuan Wang", "Jiaheng Wei", "Chris Yuhao Liu", "Jinlong Pang", "Quan Liu", "Ankit Parag Shah", "Yujia Bao", "Yang Liu", "Wei Wei"],
       venue: "ICLR 2025",
       year: "2025",
       type: "conference",
       abstract: "",
-      links: [],
+      links: [
+        { label: "arXiv", url: "https://arxiv.org/abs/2410.11143" },
+        { label: "Code", url: "https://github.com/UCSC-REAL/FLAT", icon: "github" },
+      ],
     },
   ],
 
   /* ---- projects / systems (featured ones show on the homepage) ----- */
   projects: [
     {
-      title: "AIRefinery",
-      tag: "Enterprise platform",
-      blurb: "Accenture's production multi-agent platform — agent-as-a-service across enterprise workflows, serving 1K+ concurrent users and 30+ use cases, including Fortune 500 deployments. Featured at NVIDIA GTC.",
-      tech: ["Multi-agent", "Orchestration", "RAG", "Enterprise"],
+      title: "Coding agent & agent auto-generation",
+      tag: "Lead project",
+      blurb: "As a founding member, I lead a team building a coding agent and an automated pipeline that generates task-specific agents — taking a spec to a working, tool-grounded agent with minimal manual wiring.",
+      tech: ["Agents", "Code generation", "Orchestration", "Tool use"],
       links: [],
       featured: true,
     },
     {
-      title: "Distiller",
-      tag: "Agent framework",
-      blurb: "The core agent orchestration framework powering AIRefinery — orchestrator, planning agents, dynamic tool chaining, and multi-level memory for long-horizon reasoning and coordination.",
-      tech: ["Planning", "Tool use", "Memory"],
+      title: "AIRefinery",
+      tag: "Enterprise platform",
+      blurb: "Accenture's enterprise multi-agent platform. I contributed core feature implementation across the agent stack. Featured at NVIDIA GTC.",
+      tech: ["Multi-agent", "Orchestration", "RAG"],
       links: [],
       featured: true,
     },
     {
       title: "MCP-Bench",
       tag: "Benchmark",
-      blurb: "An open benchmark for tool-using LLM agents on realistic, multi-step tasks over MCP-style tool servers. ICLR 2026 / NeurIPS 2025.",
+      blurb: "An open benchmark for tool-using LLM agents on complex, multi-step tasks over live MCP servers. ICLR 2026 / NeurIPS 2025.",
       tech: ["Agents", "Tool use", "Evaluation"],
-      links: [], // TODO: add GitHub/arXiv
+      links: [
+        { label: "arXiv", url: "https://arxiv.org/abs/2508.20453" },
+        { label: "Code", url: "https://github.com/Accenture/mcp-bench", icon: "github" },
+      ],
       featured: true,
+    },
+    {
+      title: "Distiller",
+      tag: "Agent framework",
+      blurb: "The core agent-orchestration framework behind AIRefinery — orchestrator, planning agents, dynamic tool chaining, and multi-level memory for long-horizon reasoning and coordination.",
+      tech: ["Planning", "Tool use", "Memory"],
+      links: [],
+      featured: false,
     },
     {
       title: "Hybrid retrieval system",
@@ -141,10 +163,10 @@ const SITE = {
       place: "Mountain View, CA",
       period: "2024 — Present",
       bullets: [
-        "Architected and deployed AIRefinery, a production multi-agent platform (1K+ concurrent users, 30+ enterprise use cases).",
-        "Led the core agent framework (Distiller): orchestration, planning, tool chaining, and multi-level memory.",
-        "Built schema-constrained tool execution (MCP-style grounding, validation, tracing) and a hybrid RAG system over 50M+ docs.",
-        "Designed end-to-end alignment (SFT/PPO/GRPO over 30B+ tokens) and led a team of 6 engineers.",
+        "Founding member of the agentic systems team; lead a team building a coding agent and an automated agent-generation pipeline.",
+        "Contributed core feature implementation to AIRefinery, Accenture's enterprise multi-agent platform (featured at NVIDIA GTC).",
+        "Built schema-constrained tool execution (MCP-style grounding, validation, and tracing) and a hybrid RAG system (E5 + BM25 + FAISS).",
+        "Worked on post-training alignment — SFT, PPO, and GRPO — for reasoning, tool planning, and multi-agent coordination.",
       ],
     },
     {
@@ -199,7 +221,7 @@ const SITE = {
       date: "2025",
       badge: "Talk",
       title: "AIRefinery featured at NVIDIA GTC",
-      body: "Accenture's enterprise agent platform — which I helped architect — was showcased at NVIDIA GTC.",
+      body: "Accenture's enterprise agent platform — which I contributed core features to — was showcased at NVIDIA GTC.",
     },
     {
       date: "2024",

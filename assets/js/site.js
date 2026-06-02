@@ -68,7 +68,7 @@
     el.innerHTML = `
       <div class="nav__inner">
         <a class="brand" href="index.html">
-          <span class="dot"></span>quan<span class="slash">.</span>liu
+          <span class="dot"></span>Quan&nbsp;Liu
         </a>
         <button class="icon-btn nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false">${icon("menu")}</button>
         <nav class="nav__links" id="navLinks">
@@ -106,8 +106,8 @@
     el.innerHTML = `
       <div class="wrap footer__inner">
         <div>
-          <div class="footer__brand">quan<span>.</span>liu</div>
-          <small>&copy; <span id="yr"></span> ${esc(SITE.profile.name)} · Built from scratch.</small>
+          <div class="footer__brand">Quan Liu</div>
+          <small>&copy; <span id="yr"></span> ${esc(SITE.profile.name)}</small>
         </div>
         <div class="socials">${socials}</div>
       </div>`;
