@@ -26,6 +26,7 @@
 
   const NAV = [
     { href: "index.html",        label: "Home" },
+    { href: "index.html#about",  label: "About" },
     { href: "research.html",     label: "Research" },
     { href: "projects.html",     label: "Projects" },
     { href: "updates.html",      label: "Updates" },
@@ -97,10 +98,14 @@
     onScroll();
   }
 
-  function buildFooter() {
-    const socials = activeLinks(SITE.links)
+  function socialsHTML() {
+    return activeLinks(SITE.links)
       .map((l) => `<a href="${esc(l.url)}" aria-label="${esc(l.label)}" title="${esc(l.label)}" ${l.url.startsWith("mailto") ? "" : 'target="_blank" rel="noopener"'}>${icon(l.icon)}</a>`)
       .join("");
+  }
+
+  function buildFooter() {
+    const socials = socialsHTML();
     const el = document.createElement("footer");
     el.className = "footer";
     el.innerHTML = `
@@ -249,6 +254,10 @@
 
   function renderHome() {
     renderHero();
+    // About bio (paragraphs may contain inline HTML like <strong>, so don't escape)
+    const bio = (SITE.profile.bio || []).map((p) => `<p>${p}</p>`).join("");
+    fill("aboutBio", bio);
+    fill("aboutSocials", socialsHTML());
     // selected publications (top 3)
     const pubs = (SITE.publications || []).slice(0, 3).map(pubCard).join("");
     fill("homePubs", pubs || `<p class="empty-note">// publications coming soon</p>`);

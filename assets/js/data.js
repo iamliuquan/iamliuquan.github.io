@@ -19,6 +19,12 @@ const SITE = {
       "use, RAG, and post-training alignment — this site collects my research, the " +
       "systems I build, and what I'm exploring now.",
     photo: "assets/img/profile.jpg", // square image; falls back to "QL" monogram if missing
+    // About-section bio (homepage) — one string per paragraph. Personable, first-person.
+    bio: [
+      "I'm an LLM and agent researcher, and an engineer at heart. I like turning open research questions into systems that actually run — and I care as much about whether something holds up in production as whether it works in a paper.",
+      "Today I'm at <strong>Accenture's Center for Advanced AI</strong>, where, as a founding member of our agentic systems team, I lead a team building a <strong>coding agent</strong> and an <strong>automated agent-generation pipeline</strong>, and contribute core features to <strong>AIRefinery</strong>. I earned my <strong>Ph.D. in Computer Science at Vanderbilt</strong>, working across medical imaging, computational vision, and machine learning.",
+      "My research spans <strong>LLM agents, tool use, retrieval, and post-training alignment</strong>, with recent work at ICLR and NeurIPS. Off the clock, I'm happiest on a basketball court or somewhere along the California coast.",
+    ],
     location: "San Francisco Bay Area",
     affiliation: "Accenture — Center for Advanced AI",
     email: "iamliuquan@gmail.com",
