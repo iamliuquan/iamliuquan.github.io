@@ -22,7 +22,7 @@ const SITE = {
     location: "San Francisco Bay Area",
     affiliation: "Accenture — Center for Advanced AI",
     email: "iamliuquan@gmail.com",
-    cv: "files/quan-liu-cv.pdf",
+    cv: "", // CV intentionally not published for download
     facts: [
       { label: "Role",     value: "Sr. Research Scientist &amp; Tech Lead" },
       { label: "Lab",      value: "Accenture · Center for Advanced AI" },

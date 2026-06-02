@@ -31,11 +31,13 @@ Prepend an object to `publications` (newest first). Write your name exactly as
 Prepend an object to `projects` / `updates`. Set `featured: true` on a project
 to surface it on the homepage.
 
-### Profile photo & CV
-- Photo: drop a square image in `assets/img/` and set `profile.photo` to its path.
+### Profile photo
+- Drop a square image in `assets/img/` and set `profile.photo` to its path.
   If empty or missing, a "QL" monogram is shown instead.
-- CV: put your PDF at `files/quan-liu-cv.pdf` (or update `profile.cv`). The
-  "Download CV" button hides itself automatically if the file isn't there.
+
+> The CV is intentionally **not** published for download. `profile.cv` is empty
+> and no PDF is committed. To enable it later, put a PDF in `files/` and set
+> `profile.cv` to its path — the homepage button reappears automatically.
 
 ## Structure
 ```
