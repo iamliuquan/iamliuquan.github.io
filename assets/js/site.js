@@ -134,26 +134,69 @@
     ).join("") + `</div>`;
   }
 
-  function authorsHTML(authors, me) {
-    return (authors || []).map((a) =>
-      a === me ? `<span class="me">${esc(a)}</span>` : esc(a)
-    ).join(", ");
+  // authors may be an array of names OR a single string (Scholar-style).
+  // Bolds the user's name in either "Quan Liu" or abbreviated "Q Liu" form.
+  function authorsHTML(authors) {
+    const bold = (a) => (a === "Quan Liu" || /^Q\.? ?Liu$/.test(a))
+      ? `<span class="me">${esc(a)}</span>` : esc(a);
+    if (Array.isArray(authors)) return authors.map(bold).join(", ");
+    return esc(String(authors || ""))
+      .replace(/\bQuan Liu\b/g, '<span class="me">Quan Liu</span>')
+      .replace(/\bQ Liu\b/g, '<span class="me">Q Liu</span>');
   }
 
-  function pubCard(p, meName) {
-    const links = activeLinks(p.links).map((l) =>
+  function firstAuthorIsMe(p) {
+    if (Array.isArray(p.authors)) return p.authors[0] === "Quan Liu";
+    return /^\s*(Quan Liu|Q\.? ?Liu)\b/.test(String(p.authors || ""));
+  }
+
+  function pubLinks(p) {
+    return activeLinks(p.links).map((l) =>
       `<a href="${esc(l.url)}" target="_blank" rel="noopener">${icon(l.icon || "external")}${esc(l.label)}</a>`).join("");
+  }
+
+  // homepage variant — keeps the year column
+  function pubCard(p) {
+    const links = pubLinks(p);
     return `
       <article class="pub reveal">
         <div class="pub__year">${esc(p.year || "")}</div>
         <div>
-          <div class="pub__venue">${esc(p.type || "")}${p.venue ? " · " + esc(p.venue) : ""}</div>
+          <div class="pub__venue">${esc(p.venue || "")}</div>
           <h3>${esc(p.title)}</h3>
-          <div class="pub__authors">${authorsHTML(p.authors, meName)}</div>
-          ${p.abstract ? `<p class="card__p" style="color:var(--text-soft);margin-top:.6rem;font-size:.95rem">${esc(p.abstract)}</p>` : ""}
+          <div class="pub__authors">${authorsHTML(p.authors)}</div>
+          ${p.abstract ? `<p style="color:var(--text-soft);margin-top:.6rem;font-size:.95rem">${esc(p.abstract)}</p>` : ""}
           ${links ? `<div class="inline-links">${links}</div>` : ""}
         </div>
       </article>`;
+  }
+
+  // research-page variant — no year column (year is the cluster header)
+  function pubItem(p) {
+    const links = pubLinks(p);
+    return `
+      <article class="pub-item reveal">
+        <div class="pub__venue">${esc(p.venue || "")}${firstAuthorIsMe(p) ? ' <span class="first-author">First author</span>' : ""}</div>
+        <h3>${esc(p.title)}</h3>
+        <div class="pub__authors">${authorsHTML(p.authors)}</div>
+        ${p.abstract ? `<p style="color:var(--text-soft);margin-top:.5rem;font-size:.93rem">${esc(p.abstract)}</p>` : ""}
+        ${links ? `<div class="inline-links">${links}</div>` : ""}
+      </article>`;
+  }
+
+  // group publications by year (descending) into clustered blocks
+  function pubClusters() {
+    const byYear = {};
+    (SITE.publications || []).forEach((p) => {
+      const y = String(p.year || "—");
+      (byYear[y] = byYear[y] || []).push(p);
+    });
+    const years = Object.keys(byYear).sort((a, b) => (parseInt(b) || 0) - (parseInt(a) || 0));
+    return years.map((y) => `
+      <div class="pub-group reveal">
+        <div class="pub-group__year mono">${esc(y)}</div>
+        <div class="pub-group__list">${byYear[y].map(pubItem).join("")}</div>
+      </div>`).join("");
   }
 
   function projectCard(p) {
@@ -207,7 +250,7 @@
   function renderHome() {
     renderHero();
     // selected publications (top 3)
-    const pubs = (SITE.publications || []).slice(0, 3).map((p) => pubCard(p, SITE.profile.name)).join("");
+    const pubs = (SITE.publications || []).slice(0, 3).map(pubCard).join("");
     fill("homePubs", pubs || `<p class="empty-note">// publications coming soon</p>`);
     // featured projects
     const feat = (SITE.projects || []).filter((p) => p.featured);
@@ -236,8 +279,7 @@
 
   function renderResearch() {
     fill("interests", (SITE.interests || []).map((i) => `<span class="pill pill--accent">${esc(i)}</span>`).join(""));
-    const pubs = (SITE.publications || []).map((p) => pubCard(p, SITE.profile.name)).join("");
-    fill("pubList", pubs || `<p class="empty-note">// publications coming soon</p>`);
+    fill("pubList", pubClusters() || `<p class="empty-note">// publications coming soon</p>`);
     fill("experienceList", (SITE.experience || []).map(careerItem).join(""));
     fill("educationList", (SITE.education || []).map(careerItem).join(""));
   }

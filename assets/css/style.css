@@ -310,6 +310,15 @@ h3 { font-size: 1.18rem; }
 .pub__authors .me { color: var(--text); font-weight: 600; }
 @media (max-width: 560px) { .pub { grid-template-columns: 1fr; gap: .3rem; } }
 
+/* clustered-by-year bibliography (research page) */
+.pub-group { display: grid; grid-template-columns: 96px 1fr; gap: 1.6rem; padding: 1.8rem 0; border-bottom: 1px solid var(--border); }
+.pub-group:last-child { border-bottom: none; }
+.pub-group__year { font-size: 1.6rem; font-weight: 700; color: var(--accent); line-height: 1; position: sticky; top: 86px; align-self: start; }
+.pub-group__list { display: grid; gap: 1.6rem; }
+.pub-item h3 { font-size: 1.08rem; color: var(--text); margin: .3rem 0 .4rem; }
+.first-author { font-family: var(--font-mono); font-size: .66rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); background: var(--accent-glow); padding: .1rem .4rem; border-radius: 5px; margin-left: .5rem; white-space: nowrap; }
+@media (max-width: 560px) { .pub-group { grid-template-columns: 1fr; gap: .5rem; } .pub-group__year { position: static; } }
+
 /* ---------- updates / timeline ---------- */
 .timeline { position: relative; }
 .update { display: grid; grid-template-columns: 130px 1fr; gap: 1.4rem; padding: 1.4rem 0; border-bottom: 1px solid var(--border); }

@@ -98,6 +98,117 @@ const SITE = {
         { label: "Code", url: "https://github.com/UCSC-REAL/FLAT", icon: "github" },
       ],
     },
+
+    /* --- Medical imaging, vision & ML (PhD + collaborations) --- */
+    {
+      title: "Glo-VLMs: Leveraging Vision-Language Models for Fine-Grained Diseased Glomerulus Classification",
+      authors: "Z Guo, R Saluja, H Fang, T Yao, Q Liu, Y Huo, B Liechty, DJ Pisapia",
+      venue: "SPIE Medical Imaging 2026", year: "2026", links: [],
+    },
+    {
+      title: "Evaluating Cell AI Foundation Models in Kidney Pathology with Human-in-the-Loop Enrichment",
+      authors: "J Guo, S Lu, C Cui, R Deng, T Yao, Z Tao, Y Lin, M Lionts, Q Liu, et al.",
+      venue: "Communications Medicine", year: "2025", links: [],
+    },
+    {
+      title: "From Classification to Cross-Modal Understanding: Leveraging Vision-Language Models for Fine-Grained Renal Pathology",
+      authors: "Z Guo, R Saluja, T Yao, Q Liu, J Zhu, H Wang, D Reisenbichler, Y Huo",
+      venue: "arXiv preprint", year: "2025",
+      links: [{ label: "arXiv", url: "https://arxiv.org/abs/2511.11984" }],
+    },
+    {
+      title: "Glo-In-One-v2: Holistic Identification of Glomerular Cells, Tissues, and Lesions in Human and Mouse Histopathology",
+      authors: "L Yu, M Yin, R Deng, Q Liu, T Yao, C Cui, J Guo, Y Wang, et al.",
+      venue: "Journal of Medical Imaging", year: "2025", links: [],
+    },
+    {
+      title: "DeepAndes: A Self-Supervised Vision Foundation Model for Multi-Spectral Remote Sensing Imagery of the Andes",
+      authors: "J Guo, JR Zimmer-Dauphinee, JM Nieusma, S Lu, Q Liu, R Deng, C Cui, et al.",
+      venue: "IEEE JSTARS", year: "2025", links: [],
+    },
+    {
+      title: "Rep3D: Re-parameterize Large 3D Kernels with Low-Rank Receptive Modeling for Medical Imaging",
+      authors: "HH Lee, Q Liu, S Bao, Y Huo, BA Landman",
+      venue: "arXiv preprint", year: "2025",
+      links: [{ label: "arXiv", url: "https://arxiv.org/abs/2505.19603" }],
+    },
+    {
+      title: "Write Sentence with Images: Revisit the Large Vision Model with Visual Sentence",
+      authors: "Q Liu, C Cui, R Deng, T Yao, Y Yang, Y Tang, Y Huo",
+      venue: "IS&T Electronic Imaging 2025", year: "2025", links: [],
+    },
+    {
+      title: "mTree: Multi-level Text-guided Representation End-to-End Learning for Whole Slide Image Analysis",
+      authors: "Q Liu, R Deng, C Cui, T Yao, Y Yang, V Nath, B Li, Y Chen, Y Tang, Y Huo",
+      venue: "IS&T Electronic Imaging 2025", year: "2025", links: [],
+    },
+    {
+      title: "Quantitative Benchmarking of Anomaly Detection Methods in Digital Pathology Images",
+      authors: "C Cui, X Zheng, R Deng, Q Liu, T Yao, KT Wilson, LA Coburn, et al.",
+      venue: "Machine Learning: Health", year: "2025", links: [],
+    },
+    {
+      title: "Multichannel Meta-imagers for Accelerating Machine Vision",
+      authors: "H Zheng, Q Liu, II Kravchenko, X Zhang, Y Huo, JG Valentine",
+      venue: "Nature Nanotechnology", year: "2024", links: [],
+    },
+    {
+      title: "PrPSeg: Universal Proposition Learning for Panoramic Renal Pathology Segmentation",
+      authors: "R Deng, Q Liu, C Cui, T Yao, J Yue, J Xiong, L Yu, Y Wu, M Yin, Y Wang, et al.",
+      venue: "CVPR 2024", year: "2024", links: [],
+    },
+    {
+      title: "HATS: Hierarchical Adaptive Taxonomy Segmentation for Panoramic Pathology Image Analysis",
+      authors: "R Deng, Q Liu, C Cui, T Yao, J Xiong, S Bao, H Li, M Yin, Y Wang, et al.",
+      venue: "MICCAI 2024", year: "2024", links: [],
+    },
+    {
+      title: "HoloHisto: End-to-End Gigapixel WSI Segmentation with 4K Resolution Sequential Tokenization",
+      authors: "Y Tang, Y He, V Nath, P Guo, R Deng, T Yao, Q Liu, C Cui, M Yin, et al.",
+      venue: "MICCAI 2024", year: "2024", links: [],
+    },
+    {
+      title: "ExtremeMETA: High-speed Lightweight Image Segmentation by Remodeling Multi-channel Metamaterial Imagers",
+      authors: "Q Liu, BT Swartz, I Kravchenko, JG Valentine, Y Huo",
+      venue: "arXiv preprint", year: "2024",
+      links: [{ label: "arXiv", url: "https://arxiv.org/abs/2405.17568" }],
+    },
+    {
+      title: "All-in-SAM: From Weak Annotation to Pixel-wise Nuclei Segmentation with Prompt-based Finetuning",
+      authors: "C Cui, R Deng, Q Liu, T Yao, S Bao, LW Remedios, BA Landman, Y Tang, et al.",
+      venue: "Journal of Physics: Conf. Series", year: "2024", links: [],
+    },
+    {
+      title: "Fusion: Bayesian-Based Multimodal Multi-level Fusion on Colorectal Cancer Microsatellite Instability Prediction",
+      authors: "Q Liu, J Yao, L Yao, X Chen, J Zhou, L Lu, L Zhang, Z Liu, Y Huo",
+      venue: "MICCAI 2023", year: "2023", links: [],
+    },
+    {
+      title: "Digital Modeling on Large Kernel Metamaterial Neural Network",
+      authors: "Q Liu, H Zheng, BT Swartz, H Lee, Z Asad, I Kravchenko, JG Valentine, et al.",
+      venue: "Journal of Imaging Science and Technology", year: "2023", links: [],
+    },
+    {
+      title: "Scaling Up 3D Kernels with Bayesian Frequency Re-parameterization for Medical Image Segmentation",
+      authors: "HH Lee, Q Liu, S Bao, Q Yang, X Yu, LY Cai, TZ Li, Y Huo, X Koutsoukos, et al.",
+      venue: "MICCAI 2023", year: "2023", links: [],
+    },
+    {
+      title: "DeformUX-Net: Exploring a 3D Foundation Backbone for Medical Image Segmentation with Depthwise Deformable Convolution",
+      authors: "HH Lee, Q Liu, Q Yang, X Yu, S Bao, Y Huo, BA Landman",
+      venue: "arXiv preprint", year: "2023",
+      links: [{ label: "arXiv", url: "https://arxiv.org/abs/2310.00199" }],
+    },
+    {
+      title: "Omni-Seg: A Scale-aware Dynamic Network for Renal Pathological Image Segmentation",
+      authors: "R Deng, Q Liu, C Cui, T Yao, J Long, Z Asad, RM Womick, Z Zhu, AB Fogo, et al.",
+      venue: "IEEE Transactions on Biomedical Engineering", year: "2023", links: [],
+    },
+    {
+      title: "Democratizing Pathological Image Segmentation with Lay Annotators via Molecular-Empowered Learning",
+      authors: "R Deng, Y Li, P Li, J Wang, LW Remedios, S Agzamkhodjaev, Z Asad, et al.",
+      venue: "MICCAI 2023", year: "2023", links: [],
+    },
   ],
 
   /* ---- projects / systems (featured ones show on the homepage) ----- */
