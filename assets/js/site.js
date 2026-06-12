@@ -76,7 +76,6 @@
           ${links}
           <span class="nav__theme-wrap"><button class="icon-btn" id="themeBtn" aria-label="Toggle theme" style="margin-left:.4rem">${icon("sun")}</button></span>
         </nav>
-        <button class="icon-btn" id="themeBtnTop" aria-label="Toggle theme" style="display:none">${icon("sun")}</button>
       </div>`;
     document.body.prepend(el);
 

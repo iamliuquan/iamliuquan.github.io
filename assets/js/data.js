@@ -10,14 +10,15 @@ const SITE = {
     name: "Quan Liu",
     initials: "QL",
     role: 'LLM &amp; Agent Research Scientist <b>·</b> Tech Lead <b>@</b> Accenture',
-    tagline: "Building production-grade multi-agent systems at scale.",
+    tagline: "From research to production: LLM agents that hold up at enterprise scale.",
     intro:
-      "I'm an LLM and agent research scientist at Accenture's Center for Advanced AI. " +
-      "As a founding member, I lead a team building a coding agent and an automated " +
-      "agent-generation pipeline, and I've contributed core features to AIRefinery, " +
-      "Accenture's enterprise agent platform. My work spans agent orchestration, tool " +
-      "use, RAG, and post-training alignment — this site collects my research, the " +
-      "systems I build, and what I'm exploring now.",
+      "I'm a Sr. Research Scientist and Tech Lead at Accenture's Center for Advanced AI, " +
+      "and a founding member of its agentic-systems team. I lead the team building our " +
+      "coding agent and automated agent-generation pipeline, and shipped core features of " +
+      "AIRefinery — Accenture's enterprise multi-agent platform, featured at NVIDIA GTC. " +
+      "My research on tool-using agents, retrieval, and post-training alignment appears " +
+      "at ICLR and NeurIPS; my earlier vision and medical-imaging work was published at " +
+      "CVPR, MICCAI, and in Nature Nanotechnology.",
     photo: "assets/img/profile.jpg", // square image; falls back to "QL" monogram if missing
     // About-section bio (homepage) — one string per paragraph. Personable, first-person.
     bio: [
@@ -33,6 +34,7 @@ const SITE = {
       { label: "Role",     value: "Sr. Research Scientist &amp; Tech Lead" },
       { label: "Lab",      value: "Accenture · Center for Advanced AI" },
       { label: "Focus",    value: "LLM agents · alignment · RAG" },
+      { label: "Venues",   value: "ICLR · NeurIPS · CVPR · MICCAI · Nature Nanotech" },
       { label: "Ph.D.",    value: "Computer Science, Vanderbilt (2024)" },
       { label: "Based in", value: "San Francisco Bay Area" },
       { label: "Email",    value: '<a href="mailto:iamliuquan@gmail.com">iamliuquan@gmail.com</a>' },
@@ -61,7 +63,7 @@ const SITE = {
     {
       title: "MCP-Bench: Benchmarking Tool-Using LLM Agents with Complex Real-World Tasks via MCP Servers",
       authors: ["Zhenting Wang", "Qi Chang", "Hemani Patel", "Shashank Biju", "Cheng-En Wu", "Quan Liu", "Aolin Ding", "Alireza Rezazadeh", "Ankit Shah", "Yujia Bao", "Eugene Siow"],
-      venue: "ICLR 2026 · NeurIPS 2025",
+      venue: "ICLR 2026 · NeurIPS 2025 Workshop",
       year: "2026",
       type: "conference",
       abstract: "A benchmark evaluating tool-using LLM agents on complex, multi-step tasks over 28 live MCP servers spanning 250+ tools.",
@@ -241,7 +243,7 @@ const SITE = {
     {
       title: "MCP-Bench",
       tag: "Benchmark",
-      blurb: "An open benchmark for tool-using LLM agents on complex, multi-step tasks over live MCP servers. ICLR 2026 / NeurIPS 2025.",
+      blurb: "An open benchmark for tool-using LLM agents on complex, multi-step tasks over live MCP servers. ICLR 2026 / NeurIPS 2025 Workshop.",
       tech: ["Agents", "Tool use", "Evaluation"],
       links: [
         { label: "arXiv", url: "https://arxiv.org/abs/2508.20453" },
@@ -260,7 +262,7 @@ const SITE = {
     {
       title: "Hybrid retrieval system",
       tag: "RAG / retrieval",
-      blurb: "A hybrid retrieval stack (E5 + BM25 + FAISS) over 50M+ documents — improving precision by 12% and reducing hallucination by 18% in production agents.",
+      blurb: "A hybrid retrieval stack (E5 + BM25 + FAISS) over large-scale document collections — improving retrieval precision and reducing hallucination in production agents.",
       tech: ["RAG", "FAISS", "E5", "BM25"],
       links: [],
       featured: false,
@@ -268,7 +270,7 @@ const SITE = {
     {
       title: "Alignment & post-training pipeline",
       tag: "Post-training",
-      blurb: "End-to-end LLM alignment pipeline (SFT, PPO, GRPO) over 30B+ tokens — improving reasoning, tool planning, and multi-agent coordination via failure-driven data.",
+      blurb: "End-to-end LLM alignment pipeline (SFT, PPO, GRPO) — improving reasoning, tool planning, and multi-agent coordination via failure-driven data.",
       tech: ["SFT", "PPO", "GRPO", "RLHF"],
       links: [],
       featured: false,
@@ -283,10 +285,10 @@ const SITE = {
       place: "Mountain View, CA",
       period: "May 2024 — Present",
       bullets: [
-        "Founding member of the agentic systems team; lead a team building a coding agent and an automated agent-generation pipeline.",
-        "Contributed core feature implementation to AIRefinery, Accenture's enterprise multi-agent platform (featured at NVIDIA GTC).",
-        "Built schema-constrained tool execution (MCP-style grounding, validation, and tracing) and a hybrid RAG system (E5 + BM25 + FAISS).",
-        "Worked on post-training alignment — SFT, PPO, and GRPO — for reasoning, tool planning, and multi-agent coordination.",
+        "Founding member of the agentic-systems team; lead the team building a coding agent and an automated agent-generation pipeline.",
+        "Shipped core features of AIRefinery, Accenture's enterprise multi-agent platform (featured at NVIDIA GTC).",
+        "Built schema-constrained tool execution (MCP-style grounding, validation, and tracing) and a hybrid retrieval stack (E5 + BM25 + FAISS) powering production agents.",
+        "Ran post-training alignment — SFT, PPO, and GRPO — improving reasoning, tool planning, and multi-agent coordination.",
       ],
     },
     {
@@ -346,8 +348,8 @@ const SITE = {
     {
       date: "2025",
       badge: "Paper",
-      title: "MCP-Bench at NeurIPS 2025",
-      body: "Our benchmark for tool-using agents on real-world, multi-step tasks appeared at NeurIPS 2025.",
+      title: "MCP-Bench at a NeurIPS 2025 workshop",
+      body: "Our benchmark for tool-using agents on real-world, multi-step tasks appeared at a NeurIPS 2025 workshop.",
     },
     {
       date: "2025",
